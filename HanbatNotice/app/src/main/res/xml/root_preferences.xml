@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:title="알림">
+        <SwitchPreferenceCompat
+            app:key="@string/pref_push"
+            app:summaryOff="푸시 알림을 받지 않아요."
+            app:summaryOn="푸시 알림을 받아요."
+            app:title="어제 공지 알림" />
+
+        <Preference
+            app:dependency="@string/pref_push"
+            app:key="@string/pref_time"
+            app:title="알림 시각" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="키워드">
+        <Preference
+            app:key="@string/pref_keyword"
+            app:title="키워드 설정">
+
+            <intent
+                android:targetClass="kr.ac.hanbat.notice.KeywordActivity"
+                android:targetPackage="kr.ac.hanbat.notice" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="정보">
+        <Preference
+            app:key="@string/pref_license"
+            app:title="오픈소스 라이선스" />
+    </PreferenceCategory>
+</PreferenceScreen>

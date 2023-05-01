@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">한밭대 공지</string>
+    <string name="notice_channel_id">notice</string>
+    <string name="notice_channel_name">공지사항 알림</string>
+
+    <string name="error_empty_keyword">설정된 키워드가 없어요.</string>
+    <string name="error_jsoup_exception">인터넷 연결이 원활하지 않아요.</string>
+
+    <string name="msg_notice_found">새로운 게시물이 있어요.</string>
+    <string name="msg_notice_not_found">새로운 게시물이 없어요.</string>
+    <string name="msg_exact_alarm">정확한 시각에 알림을 받으시겠어요?</string>
+
+    <string name="pref_keyword">keyword</string>
+    <string name="pref_license">license</string>
+    <string name="pref_push">push</string>
+    <string name="pref_time">time</string>
+
+    <string name="title_keyword">키워드 (%1$d/%2$d)</string>
+</resources>
