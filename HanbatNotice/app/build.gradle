@@ -3,7 +3,19 @@ plugins {
     id 'com.google.android.gms.oss-licenses-plugin'
 }
 
+def keystoreFile = System.getenv("KEYSTORE_FILE")
+
 android {
+    signingConfigs {
+        release {
+            if (keystoreFile) {
+                storeFile file(keystoreFile)
+                storePassword System.getenv("KEYSTORE_PASSWORD")
+                keyAlias System.getenv("KEY_ALIAS")
+                keyPassword System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
     namespace 'kr.ac.hanbat.notice'
     compileSdk 34
 
@@ -21,6 +33,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (keystoreFile) {
+                signingConfig signingConfigs.release
+            }
         }
     }
     compileOptions {
