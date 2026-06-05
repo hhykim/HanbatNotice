@@ -17,14 +17,14 @@ android {
         }
     }
     namespace 'kr.ac.hanbat.notice'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "kr.ac.hanbat.notice"
         minSdk 23
-        targetSdk 34
-        versionCode 3
-        versionName '1.0.2'
+        targetSdk 36
+        versionCode 5
+        versionName '1.0.4'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,6 +43,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
+        buildConfig true
         viewBinding true
     }
 }

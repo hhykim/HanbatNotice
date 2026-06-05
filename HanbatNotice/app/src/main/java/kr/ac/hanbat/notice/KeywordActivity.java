@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
 import com.google.gson.Gson;
@@ -17,7 +16,7 @@ import java.util.List;
 
 import kr.ac.hanbat.notice.databinding.ActivityKeywordBinding;
 
-public class KeywordActivity extends AppCompatActivity {
+public class KeywordActivity extends BaseActivity {
     private static final int MAX_SIZE = 10;
 
     private ActivityKeywordBinding binding;
